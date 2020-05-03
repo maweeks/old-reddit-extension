@@ -1,3 +1,7 @@
-// if (window.location.href.includes('www.reddit')) {
-window.location = window.location.href.replace('www.reddit', 'old.reddit');
-// }
+function redirect(requestDetails) {
+    return {
+        redirectUrl: requestDetails.url.replace('https://www.reddit.', 'https://old.reddit.')
+    };
+}
+
+browser.webRequest.onBeforeRequest.addListener(redirect, { urls: ['https://www.reddit.com/*'] }, ['blocking']);
