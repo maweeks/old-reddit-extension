@@ -1,6 +1,6 @@
 function redirect(requestDetails) {
     return {
-        redirectUrl: requestDetails.url.replace('https://www.reddit.', 'https://old.reddit.')
+        redirectUrl: requestDetails.url.replace('https://www.reddit.com/', 'https://old.reddit.com/')
     };
 }
 

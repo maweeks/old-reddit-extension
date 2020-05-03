@@ -1,11 +1,11 @@
 {
     "manifest_version": 2,
     "name": "OldReddit",
-    "version": "0.1.0",
+    "version": "0.1.1",
 
     "description": "Redirects www.reddit.com to old.reddit.com.",
 
-    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>", "<all_urls>"],
+    "permissions": ["webRequest", "webRequestBlocking", "https://www.reddit.com/", "https://old.reddit.com/"],
 
     "background": {
         "scripts": ["scripts/redirect.js"]
